@@ -1,0 +1,62 @@
+/* GENERAL SYTLES */
+/* ======================================= */
+
+body{
+    background: lightblue;
+    color: rgb(90, 89, 170);
+    padding: 30px;
+    font-size: 20px;
+}
+
+::selection {
+    color: green;
+    text-shadow: 
+        0 0 10px green,
+        0 0 10px green,
+        0 0 30px lightgreen,
+        0 0 30px lightgreen,
+        0 0 60px yellowgreen,
+        0 0 60px yellowgreen;
+}
+
+/* NAV */
+/* ======================================= */
+
+.nav {
+    margin-bottom: 30px;
+}
+
+.nav-link{
+    background-color: rgb(181, 235, 235);
+    color: white;
+    padding: 5px;
+    border-radius: 70px;
+    margin-right: 18px;
+}
+
+.nav-link:hover {
+    background-color: rgb(117, 204, 82);
+    box-shadow: 0 0 30px rgb(117, 204, 82), 0 0 18px rgb(117, 204, 82);
+}
+
+/* MAIN */
+/* ======================================== */
+
+.main{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.home 
+    .main {
+    font-size: 8rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
