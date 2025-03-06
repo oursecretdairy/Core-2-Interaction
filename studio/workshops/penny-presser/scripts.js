@@ -23,3 +23,5 @@ pressButton.addEventListener('click', () => {
      //log the penny image
      console.log(pennyImage);
 })
+
+//
