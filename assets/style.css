@@ -1,4 +1,4 @@
-/* Base Reset */
+/* Reset */
 * {
 	margin: 0;
 	padding: 0;
@@ -7,90 +7,162 @@
   
   body {
 	font-family: 'Inter', sans-serif;
-	background-color: #f7f9fc;
-	color: #2d3a4b;
+	background: linear-gradient(135deg, #fce4ec, #f8bbd0, #fff1f7);
+	color: #1a1a1a;
 	padding: 2rem;
-	line-height: 1.6;
+	line-height: 1.8;
+	font-size: 16px;
+	background-attachment: fixed;
+  }
+  body::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	background: radial-gradient(circle at top left, rgba(255,255,255,0.25), transparent 70%);
+	z-index: -1;
   }
   
-  header {
-	text-align: center;
-	margin-bottom: 3rem;
-  }
-  
+  /* Typography */
   h1 {
-	font-size: 2.5rem;
-	font-weight: 600;
-	color: #1a2b4c;
+	font-family: "ivymode", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	color: #ee5ca0;
+	text-align: center;
+	margin-bottom: 0.5rem;
   }
   
   h2 {
-	font-size: 1.75rem;
-	font-weight: 500;
-	margin-bottom: 1.5rem;
-	color: #3a4e6b;
+	font-family: "ivymode", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	color: #ee5ca0;
+	text-align: center;
+	margin-bottom: 2rem;
   }
   
-  /* Project List Section */
-  .project-list {
-	max-width: 800px;
-	margin: 0 auto 3rem auto;
+  section h2 {
+	color: #ee5ca0;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
   }
   
-  /* Dropdown Styles */
-  .project-dropdown {
-	background-color: #fff;
-	border-radius: 12px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  /* Container */
+  main {
+	max-width: 950px;
+	margin: 0 auto;
+  }
+  
+  /* Project Section */
+  .project-list,
+  .workshops {
+	font-family: "ivymode", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
 	margin-bottom: 1rem;
-	padding: 1rem 1.2rem;
-	transition: all 0.3s ease;
+  }
+  
+  .project-dropdown {
+	font-family: "ivymode", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	background: transparent;
+	border: 1px solid #f7a9ce; /* soft pastel pink outline */
+	border-radius: 14px;
+	padding: 0.8rem 1rem;
+	transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .project-dropdown:hover {
+	background-color: rgba(255, 240, 247, 0.3); /* light pink glow on hover */
+	border-color: #d12b8f;
+	transform: none; /* remove lift effect */
+	box-shadow: none; /* no shadow */
   }
   
   .project-dropdown summary {
-	font-size: 1.2rem;
-	font-weight: 600;
-	color: #2e3d55;
-	cursor: pointer;
-	list-style: none;
-	outline: none;
-  }
+	font-size: 1.1rem;
+	padding: 0.2rem 0;
+	margin: 0;
+	color: #ee5ca0;
+  }  
   
   .project-dropdown[open] summary {
-	color: #1a4f85;
+	color: #d12b8f;
   }
   
   .project-dropdown ul {
 	list-style: none;
-	padding: 0.5rem 0 0 1rem;
-	margin: 0;
+	padding-left: 1rem;
+	margin-top: 0.6rem;
   }
   
   .project-dropdown li {
-	margin: 0.4rem 0;
+	margin: 0.5rem 0;
   }
   
   .project-dropdown a {
-	color: #336699;
 	text-decoration: none;
+	color: #ffffff;
 	font-size: 1rem;
-	transition: color 0.2s ease;
+	transition: all 0.2s ease;
+	border-bottom: 1px solid transparent;
   }
   
   .project-dropdown a:hover {
-	color: #1a4f85;
-	text-decoration: underline;
+	color: #d12b8f;
+	border-bottom: 1px solid #d12b8f;
   }
   
-  /* Workshop Section */
-  .workshops {
-	max-width: 800px;
-	margin: 0 auto;
+  /* Workshop Styles */
+  .workshops ul {
+	list-style: none;
+	padding: 0;
   }
   
-  ul {
-	padding-left: 1rem;
+  .workshops li {
+	margin-bottom: 1rem;
   }
+  
+  .workshops a {
+	display: block;
+	padding: 0.6rem 1rem;
+	border: 1px solid #f7a9ce;
+	border-radius: 14px;
+	text-align: left;
+	background: transparent;
+	color: #ee5ca0;
+	transition: all 0.2s ease;
+	text-decoration: none;
+  }
+  
+  .workshops a:hover {
+	background-color: rgba(255, 240, 247, 0.3);
+	color: #d12b8f;
+	border-color: #d12b8f;
+  }   
+  
+  /* Optional Extras */
+  section:not(:first-of-type) {
+	border-top: 1px solid #eee;
+	padding-top: 2rem;
+  }
+  
+  /* Subtle sparkle effect (optional for hover) */
+  .project-dropdown:hover::after {
+	content: '✨';
+	float: right;
+	font-size: 1.2rem;
+	opacity: 0.3;
+  }
+  
+  
+  
+  
   
   
   
